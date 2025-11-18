@@ -1,0 +1,20 @@
+<section class="capture">
+  <div class="card">
+    <h2 class="card__title">¿Quién es ese Pokémon?</h2>
+
+    <div class="pokemon">
+      <img [src]="pokemon.img" alt="Pokémon oscurecido">
+    </div>
+
+    <form class="form" [formGroup]="form" (ngSubmit)="enviar()">
+      <div class="ops">
+        <div class="op" *ngFor="let r of restas; let i = index">
+          <label class="op__label" [attr.for]="'r' + i">{{ r.a }} − {{ r.b }} =</label>
+          <input class="op__input" [id]="'r' + i" type="number" formControlName="{{ 'r' + i }}" required>
+        </div>
+      </div>
+
+      <button class="btn" type="submit" [disabled]="form.invalid">Enviar</button>
+    </form>
+  </div>
+</section>

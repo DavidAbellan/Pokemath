@@ -1,0 +1,65 @@
+/* Fondo general */
+.pokedex {
+  padding: 20px;
+  min-height: 100vh;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Botón volver */
+.back-btn {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background: #333;
+}
+
+/* Mensaje vacío */
+.empty-message {
+  font-size: 16px;
+  color: #555;
+  margin-top: 40px;
+}
+
+/* Cuadrícula simple */
+.pokemon-list {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Tarjeta muy simple */
+.pokemon-card {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Imagen pequeña, centrada y sin montarse */
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain; /* evita montarse */
+}
+
+/* Nombre */
+.pokemon-card h3 {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #333;
+}

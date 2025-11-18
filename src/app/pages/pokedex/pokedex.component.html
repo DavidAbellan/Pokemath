@@ -1,0 +1,13 @@
+<ng-container *ngIf="pokemons.length > 0; else vacio">
+  <div class="pokemon-list">
+    <div *ngFor="let p of pokemons" class="pokemon-card">
+      <img [src]="p.img" alt="{{ p.nombre }}">
+     <div></div> <h3>{{ p.nombre }}</h3>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #vacio>
+  <div class="empty-message">No tienes ningún Pokémon todavía. ¡Captura alguno!</div>
+</ng-template>
+

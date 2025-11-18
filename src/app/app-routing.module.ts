@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { CapturaComponent } from './pages/captura/captura.component';
+import { PokedexComponent } from './pages/pokedex/pokedex.component';
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'captura', component: CapturaComponent },
+  { path: 'pokedex', component: PokedexComponent },
+  { path: '**', redirectTo: '' },
+ 
+];
 
-const routes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+ imports: [RouterModule.forRoot(routes, { bindToComponentInputs: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
