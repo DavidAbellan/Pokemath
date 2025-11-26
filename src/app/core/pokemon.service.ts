@@ -41,20 +41,20 @@ export class PokemonService {
     { nombre: 'Pok',   img: 'assets/pokemon/pok.png' },
     { nombre: 'Rayquazar',   img: 'assets/pokemon/rayquazar.png' },
     { nombre: 'Sceptile',   img: 'assets/pokemon/sceptile.png' },
-    { nombre: 'Sparrow',   img: 'assets/pokemon/sparrow.png' },
+    { nombre: 'Zapdos',   img: 'assets/pokemon/sparrow.png' },
     { nombre: 'Togepi',   img: 'assets/pokemon/togepi.png' },
     { nombre: 'Teddiursa',   img: 'assets/pokemon/teddiursa.png' },
     { nombre: 'Zorua',   img: 'assets/pokemon/zeraora.png' },
     { nombre: 'Umbreon',   img: 'assets/pokemon/umbreon.png' },
     { nombre: 'Wartortle',   img: 'assets/pokemon/wartortle.png' },
     { nombre: '?????',   img: 'assets/pokemon/nos10.png' },
-    { nombre: '?????',   img: 'assets/pokemon/nose.png' },
+    { nombre: 'Trecko',   img: 'assets/pokemon/nose.png' },
     { nombre: '?????',   img: 'assets/pokemon/nose3.png' },
     { nombre: '?????',   img: 'assets/pokemon/nose4.png' },
     { nombre: '?????',   img: 'assets/pokemon/nose5.png' },
     { nombre: '?????',   img: 'assets/pokemon/nose6.png' },
     { nombre: '?????',   img: 'assets/pokemon/nose7.png' },
-    { nombre: '?????',   img: 'assets/pokemon/nose8.png' },
+    { nombre: 'Articuno',   img: 'assets/pokemon/nose8.png' },
     { nombre: '?????',   img: 'assets/pokemon/nose9.png' },
     { nombre: '?????',   img: 'assets/pokemon/nose2.png' },
     { nombre: '?????',   img: 'assets/pokemon/nose11.png' },
@@ -82,7 +82,18 @@ export class PokemonService {
     { nombre: 'Nidorino',   img: 'assets/pokemon/nidorino.png' },
     { nombre: 'Nidokin',   img: 'assets/pokemon/nidokin.png' },
     { nombre: 'Palkia',   img: 'assets/pokemon/palkia.png' },
-    { nombre: '?????',   img: 'assets/pokemon/nose13.png' }
+    { nombre: 'Vaporeon',   img: 'assets/pokemon/nose13.png' },
+    { nombre: 'Luxio',   img: 'assets/pokemon/luxio.png' },
+    { nombre: 'Shinx',   img: 'assets/pokemon/shinx.png' },
+    { nombre: 'Dedenne',   img: 'assets/pokemon/dedenne.png' },
+    { nombre: 'Pumpkaboo',   img: 'assets/pokemon/pumpkaboo.png' },
+    { nombre: 'Braixen',   img: 'assets/pokemon/braixen.png' },
+    { nombre: 'Furfrou',   img: 'assets/pokemon/furfrou.png' },
+    { nombre: 'Porygon',   img: 'assets/pokemon/porygon.png' },
+    { nombre: 'Pancham',   img: 'assets/pokemon/pancham.png' },
+    { nombre: 'Dedenne',   img: 'assets/pokemon/dedenne.png' },
+    { nombre: 'Moltres',   img: 'assets/pokemon/moltres.png' }
+
    
     // añade más si quieres
   ];
