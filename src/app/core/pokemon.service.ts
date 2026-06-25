@@ -104,78 +104,46 @@ export class PokemonService {
   }
    /** Genera N restas con a>b para que el resultado sea >=1 */
  /** Genera las 3 pruebas matemáticas */
-generarOperaciones(): { 
-  tipo: string; 
-  a: number; 
-  b: number 
+generarOperaciones(): {
+  tipo: string;
+  a: number;
+  b: number;
 }[] {
 
   return [
     this.generarSuma(),
-    this.generarRestaConLlevada(),
-    this.generarMultiplicacion()
+    this.generarResta(),
+    this.generarSuma()
   ];
 }
 
 
-/** Suma de dos números de 3 cifras */
+/** Suma simple 1-9 */
 private generarSuma() {
   return {
     tipo: 'suma',
-    a: this.rand(100, 999),
-    b: this.rand(100, 999)
+    a: this.rand(1, 9),
+    b: this.rand(1, 9)
   };
 }
 
 
-/** Resta donde hay llevadas */
-private generarRestaConLlevada() {
+/** Resta simple SIN negativos */
+private generarResta() {
 
-  let a: number;
-  let b: number;
+  const a = this.rand(1, 9);
+  const b = this.rand(1, 9);
 
-  do {
-    a = this.rand(200, 999);
-    b = this.rand(100, a - 1);
-
-  } while (
-    // fuerza que tenga alguna llevada
-    !this.tieneLlevada(a, b)
-  );
+  // evitar resultados negativos
+  const max = Math.max(a, b);
+  const min = Math.min(a, b);
 
   return {
     tipo: 'resta',
-    a,
-    b
+    a: max,
+    b: min
   };
 }
-
-
-/** Multiplicación sencilla */
-private generarMultiplicacion() {
-
-  return {
-    tipo: 'multiplicacion',
-    a: this.rand(2, 8),
-    b: this.rand(2, 8)
-  };
-
-}
-
-
-/** Comprueba si una resta necesita llevar */
-private tieneLlevada(a:number, b:number):boolean {
-
-  const unidadesA = a % 10;
-  const unidadesB = b % 10;
-
-  const decenasA = Math.floor(a / 10) % 10;
-  const decenasB = Math.floor(b / 10) % 10;
-
-
-  return unidadesA < unidadesB || decenasA < decenasB;
-}
-
 
 private rand(min:number, max:number):number {
   return Math.floor(Math.random() * (max - min + 1)) + min;

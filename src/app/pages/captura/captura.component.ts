@@ -11,7 +11,7 @@ import { PokemonStorageService } from '../../core/pokemon-storage.service';
 })
 export class CapturaComponent implements OnInit {
    pokemon!: Pokemon;
-  operaciones: { tipo : String;a: number; b: number }[] = [];
+  operaciones: { tipo: string; a: number; b: number }[] = [];
   form!: FormGroup;
 
   constructor(
